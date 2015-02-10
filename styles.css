@@ -25,6 +25,14 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-.squareDancer{
+.sqDancer{
+  border: 10px solid black;
+  border-radius:10px;
+  position: absolute;
   /*figure out how to add an image*/
 }
+.squareDancerImg{
+  height: 100px;
+  width: 100px
+}
+
