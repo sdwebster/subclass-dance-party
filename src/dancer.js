@@ -13,6 +13,7 @@ var Dancer = function(top, left, timeBetweenSteps){
 Dancer.prototype.step = function(){
   // the basic dancer just schedules the next step
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
+
 };
 
 Dancer.prototype.setPosition = function(top, left){

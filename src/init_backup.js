@@ -45,13 +45,10 @@ $(document).ready(function(){
   });
 
   $('body').on('click', '.dancer', function(event){
-    var angle = Math.random() * 2 * Math.PI;
-    var dVert = 100 * Math.sin(angle);
-    var dHor = 100 * Math.cos(angle);
-    console.log(angle);
-    $(this).animate({
-      top: '+=' + dVert,
-      left: '+='+ dHor
+    console.log('mo');
+    this.$node.animate({
+      height: '+=300',
+      width: '+=300'
     })
   });
 });

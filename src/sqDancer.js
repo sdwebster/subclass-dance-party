@@ -1,18 +1,19 @@
-var SquareDancer = function(top, left, timeBetweenSteps){
-  this.photos = ["squareDance.gif", "squareDance-reversed.gif", "dancers-silhouette.jpeg"];
+var SwingDancer = function(top, left, timeBetweenSteps){
+  this.photos = ["swingDance.gif", "swingDance-reversed.gif", "dancers-silhouette.jpeg"];
   Dancer.apply(this, [top, left, timeBetweenSteps]);
   this.$node.attr("class", "sqDancer");
-  this.$image = "<img class='squareDancerImg' src='squareDance.gif'/>";
+  this.$image = "<img class='swing
+DancerImg' src='swingDance.gif'/>";
   this.$node.prepend(this.$image);
 };
-SquareDancer.prototype = Object.create(Dancer.prototype);
-SquareDancer.prototype.constructor = SquareDancer;
+SwingDancer.prototype = Object.create(Dancer.prototype);
+SwingDancer.prototype.constructor = SwingDancer;
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
-SquareDancer.prototype.oldStep = Dancer.prototype.step;
+SwingDancer.prototype.oldStep = Dancer.prototype.step;
 
-SquareDancer.prototype.step = function(){
+SwingDancer.prototype.step = function(){
 
   // call the old version of step at the beginning of any call to this new version of step
   this.oldStep();
